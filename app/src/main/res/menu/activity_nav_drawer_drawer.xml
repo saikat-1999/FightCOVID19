@@ -32,5 +32,10 @@
             android:title="Donate"
             android:icon="@drawable/ic_attach_money_black_24dp"
             />
+        <item
+            android:id="@+id/twitter"
+            android:title="Twitter Feed"
+            android:icon="@drawable/twitter_logo_blue"/>
+
     </group>
 </menu>

@@ -102,6 +102,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             intent.putExtra("choice","state");
             startActivity(intent);
         }
+        else if(id==R.id.twitter) {
+            Intent intent=new Intent(HomeActivity.this,twitter.class);
+            startActivity(intent);
+
+        }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
