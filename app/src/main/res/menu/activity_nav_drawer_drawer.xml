@@ -21,7 +21,16 @@
             android:title="Work from Home" />
         <item
             android:id="@+id/stats"
-            android:title="Current Statistics"
+            android:title="Global Statistics"
             android:icon="@drawable/ic_equalizer_black_24dp"/>
+        <item
+            android:id="@+id/state_stats"
+            android:title="State-wise Statistics"
+            android:icon="@drawable/ic_equalizer_black_24dp"/>
+        <item
+            android:id="@+id/donate"
+            android:title="Donate"
+            android:icon="@drawable/ic_attach_money_black_24dp"
+            />
     </group>
 </menu>

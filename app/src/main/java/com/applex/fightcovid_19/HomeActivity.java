@@ -77,8 +77,19 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             startActivity(intent);
         }
 
-        if (id==R.id.stats) {
+        else if (id==R.id.stats) {
             Intent intent = new Intent(HomeActivity.this,statistics.class);
+            intent.putExtra("choice","stats");
+            startActivity(intent);
+        }
+        else if (id==R.id.donate) {
+            Intent intent = new Intent(HomeActivity.this,statistics.class);
+            intent.putExtra("choice","donate");
+            startActivity(intent);
+        }
+        else if (id==R.id.state_stats) {
+            Intent intent = new Intent(HomeActivity.this,statistics.class);
+            intent.putExtra("choice","state");
             startActivity(intent);
         }
 

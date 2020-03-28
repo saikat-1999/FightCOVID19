@@ -35,7 +35,13 @@ public class statistics extends AppCompatActivity {
                 webView.setVisibility(View.VISIBLE);
             }
         });
-        webView.loadUrl("https://www.covidvisualizer.com/");
+        if(getIntent().getStringExtra("choice").matches("stats"))
+            webView.loadUrl("https://www.covidvisualizer.com/");
+        else if(getIntent().getStringExtra("choice").matches("donate"))
+            webView.loadUrl("https://www.pmindia.gov.in/en/?query#");
+        else if(getIntent().getStringExtra("choice").matches("state"))
+            webView.loadUrl("https://www.mohfw.gov.in/");
+
     }
 
     @Override
