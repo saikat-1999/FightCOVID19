@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".healthyparenting">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Parenting in the time of COVID-19"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/blue"
+        android:paddingTop="15dp"
+        android:paddingStart="15dp"
+        android:paddingBottom="15dp"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingStart="15dp"
+            android:paddingBottom="15dp"
+            android:textSize="18dp"
+            android:lineSpacingExtra="5dp"
+            android:textColor="#000"
+            android:text="To help parents interact constructively with their children during this time of confinement, these six tips for parents cover planning one-on-one time, staying positive, creating a daily routine, avoiding bad behaviour, managing stress, and talking about COVID-19. Parents are advised to use them to their and their kids’ advantage, and have fun in doing so.  "/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginLeft="25dp"
+        android:orientation="horizontal">
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll"
+            android:layout_marginRight="25dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginRight="25dp">
+
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/parenting1"/>
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/parenting2"/>
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/parenting3"/>
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/parenting4"/>
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/parenting5"/>
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:layout_marginRight="0dp"
+                    android:src="@drawable/parenting6"/>
+
+
+            </LinearLayout>
+
+
+
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="350dp"-->
+<!--        android:orientation="vertical">-->
+<!--    <ScrollView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="15dp">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:layout_marginBottom="15dp">-->
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="350dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:layout_marginTop="0dp"-->
+<!--        android:src="@drawable/parenting1"/>-->
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="350dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:src="@drawable/parenting2"/>-->
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="350dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:src="@drawable/parenting3"/>-->
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="350dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:src="@drawable/parenting4"/>-->
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="350dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:src="@drawable/parenting5"/>-->
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="350dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:src="@drawable/parenting6"/>-->
+<!--    </LinearLayout>-->
+<!--    </ScrollView>-->
+
+<!--    </LinearLayout>-->
+
+
+
+</RelativeLayout>

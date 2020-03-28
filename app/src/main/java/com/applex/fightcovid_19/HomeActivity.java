@@ -23,8 +23,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     private AppBarConfiguration mAppBarConfiguration;
     Button masks;
-    Button myth;
-
+    Button myths;
+    Button parenting;
+    Button work;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,9 +60,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
-        myth = findViewById(R.id.myths);
+        myths = findViewById(R.id.myths);
 
-        myth.setOnClickListener(new View.OnClickListener() {
+        myths.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),myth.class);
@@ -69,7 +70,29 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+        work=findViewById(R.id.work);
+
+//        work.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(),work.class);
+//                startActivity(intent);
+//
+//            }
+//        });
+
+        parenting=findViewById(R.id.parenting);
+
+        parenting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),healthyparenting.class);
+                startActivity(intent);
+
+            }
+        });
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
