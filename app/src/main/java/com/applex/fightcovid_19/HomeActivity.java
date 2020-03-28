@@ -23,7 +23,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     private AppBarConfiguration mAppBarConfiguration;
     Button masks;
-
+    Button myth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +56,16 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 Intent intent = new Intent(getApplicationContext(),mask.class);
                 startActivity(intent);
 
+            }
+        });
+
+        myth = findViewById(R.id.myths);
+
+        myth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),myth.class);
+                startActivity(intent);
             }
         });
 
