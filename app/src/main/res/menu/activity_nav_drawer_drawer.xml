@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_switch"
+            android:title="Reminder"
+            app:actionLayout="@layout/action_switch"
+            />
+        <item
+            android:id="@+id/guide_child"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Guidance for children" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Work from Home" />
+        <item
+            android:id="@+id/stats"
+            android:title="Current Statistics"
+            android:icon="@drawable/ic_equalizer_black_24dp"/>
+    </group>
+</menu>

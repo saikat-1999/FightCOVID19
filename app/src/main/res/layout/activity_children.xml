@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".children">
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Checklist for Students and Children"
+        android:textColor="@color/blue"
+        android:padding="15dp"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/point1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. In a situation like this it is normal to feel sad, worried, confused, scared or angry.\nKnow that you are not alone and talk to someone you trust, like your parent or teacher so that you can help keep yourself and your school safe and healthy.\no Ask questions, educate yourself and get information from reliable sources"
+        android:padding="15dp"
+        android:layout_below="@+id/title1"/>
+    <TextView
+        android:id="@+id/point2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. Protect yourself and others\no Wash your hands frequently, always with soap and water for at least 20 seconds\no Remember to not touch your face\no Do not share cups, eating utensils, food or drinks with others "
+        android:padding="15dp"
+        android:layout_below="@+id/point1"/>
+    <TextView
+        android:id="@+id/point3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3. Be a leader in keeping yourself, your school, family and community healthy.\no Share what you learn about preventing disease with your family and friends, especially with younger children\no Model good practices such as sneezing or coughing into your elbow and washing your hands, especially for younger family members "
+        android:padding="15dp"
+        android:layout_below="@id/point2"/>
+    <TextView
+        android:id="@+id/point4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4.Tell your parents, another family member, or a caregiver if you feel sick, and ask to stay home."
+        android:padding="15dp"
+        android:layout_below="@id/point3"/>
+
+
+
+</RelativeLayout>
