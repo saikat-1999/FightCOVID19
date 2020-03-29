@@ -9,11 +9,12 @@
         <item
             android:id="@+id/nav_switch"
             android:title="Reminder"
+            android:icon="@drawable/ic_access_alarm_black_24dp"
             app:actionLayout="@layout/action_switch"
             />
         <item
             android:id="@+id/guide_child"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_playlist_add_check_black_24dp"
             android:title="Guidance for children" />
         <item
             android:id="@+id/nav_slideshow"
@@ -22,7 +23,7 @@
         <item
             android:id="@+id/stats"
             android:title="Global Statistics"
-            android:icon="@drawable/ic_equalizer_black_24dp"/>
+            android:icon="@drawable/statistics"/>
         <item
             android:id="@+id/state_stats"
             android:title="State-wise Statistics"
