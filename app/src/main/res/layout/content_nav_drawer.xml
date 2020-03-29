@@ -25,31 +25,26 @@
     </LinearLayout>
 
 
-        <TextView
-            android:id="@+id/Advice"
-            android:layout_below="@+id/animation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="25dp"
-            android:textStyle="bold"
-            android:padding="15dp"
-            android:textColor="#D31212"
-            tools:ignore="MissingConstraints"
-            android:text="General Public Advice"/>
-
-
-
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Advice">
+        android:layout_below="@+id/animation">
         <LinearLayout
-            android:layout_below="@+id/Advice"
             android:id="@+id/cardviews"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+            <TextView
+                android:id="@+id/Advice"
+                android:layout_below="@+id/animation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:paddingHorizontal="20dp"
+                android:textColor="#D31212"
+                tools:ignore="MissingConstraints"
+                android:text="General Public Advice"/>
 
              <LinearLayout
             android:layout_width="match_parent"
@@ -178,7 +173,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="130dp"
-                            android:padding="14dp"
+                            android:padding="1dp"
                             android:layout_gravity="center"
                             android:src="@drawable/parenting"/>
                         <TextView
