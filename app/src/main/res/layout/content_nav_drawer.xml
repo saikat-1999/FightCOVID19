@@ -24,81 +24,177 @@
             app:lottie_autoPlay="true"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
-        android:orientation="vertical"
-        tools:ignore="MissingConstraints">
 
         <TextView
+            android:id="@+id/Advice"
+            android:layout_below="@+id/animation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="25dp"
             android:textStyle="bold"
-            android:paddingStart="15dp"
+            android:padding="15dp"
             android:textColor="#D31212"
             tools:ignore="MissingConstraints"
             android:text="General Public Advice"/>
 
 
-    </LinearLayout>
 
 
-    <LinearLayout
-        android:id="@+id/cardviews"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginTop="190dp">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Advice">
+        <LinearLayout
+            android:layout_below="@+id/Advice"
+            android:id="@+id/cardviews"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/masks"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:textColor="#fff"
+             <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
                 android:layout_margin="15dp"
-                android:text="When and how to use masks"
-                android:textSize="20dp"
-                android:background="#3391DD"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_width="155dp"
+                android:layout_height="210dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_back">
+                <LinearLayout
+                android:id="@+id/myths"
+                android:layout_width="150dp"
+                android:layout_height="204dp"
+                android:layout_gravity="center"
+                    android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:layout_margin="2dp"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:padding="10dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/mymask"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="When and how to use masks"
+                        android:textColor="#000"
+                        android:textAllCaps="true"
+                        android:padding="10dp"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center"
+                        android:textSize="20dp"/>
+            </LinearLayout>
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_margin="15dp"
+                android:layout_width="155dp"
+                android:layout_height="210dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_back">
+                <LinearLayout
+                    android:id="@+id/masks"
+                    android:layout_width="150dp"
+                    android:layout_height="204dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_background"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:padding="10dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/myth"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Myth Busters"
+                        android:textColor="#000"
+                        android:textAllCaps="true"
+                        android:padding="10dp"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center"
+                        android:textSize="20dp"/>
+                </LinearLayout>
+            </LinearLayout>
 
-        <Button
-            android:id="@+id/myths"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:textColor="#fff"
-            android:layout_margin="15dp"
-            android:text="Myth_busters"
-            android:textSize="20dp"
-            android:background="#3391DD"
-            android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_margin="15dp"
+                    android:layout_width="155dp"
+                    android:layout_height="210dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_back">
+                    <LinearLayout
+                        android:id="@+id/work"
+                        android:layout_width="150dp"
+                        android:layout_height="204dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_background"
+                        android:layout_margin="2dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:padding="10dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/workplace"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Getting Workplace Ready"
+                            android:textColor="#000"
+                            android:textAllCaps="true"
+                            android:padding="10dp"
+                            android:gravity="center_horizontal"
+                            android:textAlignment="center"
+                            android:textSize="20dp"/>
+                    </LinearLayout>
+                </LinearLayout>
 
+                <LinearLayout
+                    android:layout_margin="15dp"
+                    android:layout_width="155dp"
+                    android:layout_height="210dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_back">
+                    <LinearLayout
+                        android:id="@+id/parenting"
+                        android:layout_width="150dp"
+                        android:layout_height="204dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/button_background"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:padding="14dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/parenting"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Healthy Parenting"
+                            android:textColor="#000"
+                            android:textAllCaps="true"
+                            android:padding="10dp"
+                            android:gravity="center_horizontal"
+                            android:textAlignment="center"
+                            android:textSize="20dp"/>
+                    </LinearLayout>
+                </LinearLayout>
 
-        <Button
-            android:id="@+id/work"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:textColor="#fff"
-            android:layout_margin="15dp"
-            android:text="Getting workplace ready"
-            android:textSize="20dp"
-            android:background="#3391DD"
-            android:layout_gravity="center_horizontal"/>
-
-        <Button
-            android:id="@+id/parenting"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:textColor="#fff"
-            android:layout_margin="15dp"
-            android:text="Healthy parenting"
-            android:textSize="20dp"
-            android:background="#3391DD"
-            android:layout_gravity="center_horizontal"/>
-
-
-
-    </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 </RelativeLayout>
