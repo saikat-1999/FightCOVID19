@@ -66,14 +66,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         work=findViewById(R.id.work);
 
-//        work.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(),work.class);
-//                startActivity(intent);
-//
-//            }
-//        });
+        work.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),workplace.class);
+                startActivity(intent);
+
+            }
+        });
 
         parenting=findViewById(R.id.parenting);
 

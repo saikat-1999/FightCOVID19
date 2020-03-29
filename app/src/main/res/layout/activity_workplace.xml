@@ -1,9 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".workplace">
+    tools:context=".workplace"
+    android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back2"
+                android:text="Make sure workplaces are clean and hygienic"
+                android:textColor="@android:color/white"
+                android:textSize="18dp"
+                android:padding="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                android:layout_margin="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="- Surfaces (e.g. desks and tables) and objects (e.g. telephones, keyboards) need to be wiped
+with disinfectant regularly\nWhy? Because contamination on surfaces touched by employees and customers is one of
+the main ways that COVID-19 spreads"
+        android:textColor="@android:color/black"
+        android:textSize="15dp"
+        android:fontFamily="sans-serif-thin"
+        android:textStyle="bold"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:padding="10dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_back"
+                android:text="Promote regular and thorough hand-washing"
+                android:textColor="@android:color/white"
+                android:textSize="18dp"
+                android:padding="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                android:layout_margin="10dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="– Put sanitizing hand rub dispensers in prominent places around the workplace. Make sure
+these dispensers are regularly refilled\n– Combine with other communication measures such as offering guidance from
+occupational health and safety officers, briefings at meetings, and information on intranet
+sites to promote hand-washing\nWhy? Because washing kills the virus on your hands and prevents the spread of COVID19.
+"
+        android:textColor="@android:color/black"
+        android:textSize="15dp"
+        android:fontFamily="sans-serif-thin"
+        android:textStyle="bold"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:padding="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back2"
+                android:text="Promote respiratory hygiene in the workplace"
+                android:textColor="@android:color/white"
+                android:textSize="18dp"
+                android:padding="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                android:layout_margin="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="– Display posters promoting respiratory hygiene. Combine this with other communication
+measures such as guidance from occupational health and safety officers, briefing at
+meetings, and information on the intranet, etc.\n– Ensure that face masks1 or paper tissues are available at your workplaces, for those who
+develop a runny nose or cough at work, along with closed bins for hygienically disposing
+of them\nWhy? Because good respiratory hygiene prevents the spread of COVID-19."
+        android:textColor="@android:color/black"
+        android:textSize="15dp"
+        android:fontFamily="sans-serif-thin"
+        android:textStyle="bold"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_back"
+                android:text="Emergency"
+                android:textColor="@android:color/white"
+                android:textSize="18dp"
+                android:padding="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                android:layout_margin="10dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Brief your employees, contractors, and customers that if COVID-19 starts spreading in your
+community anyone with even a mild cough or low-grade fever (37.3 C or more) needs to stay at
+home. They should also stay home (or work from home) if they have had to take simple
+medications, such as paracetamol/acetaminophen, ibuprofen or aspirin, which may mask
+symptoms of infection"
+                android:textColor="@android:color/black"
+                android:textSize="15dp"
+                android:fontFamily="sans-serif-thin"
+                android:textStyle="bold"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:padding="10dp"/>
+        </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
