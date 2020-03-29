@@ -143,6 +143,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             startActivity(intent);
         }
 
+        else if (id == R.id.nav_slideshow) {
+            // Handle the camera action
+            Intent intent=new Intent(HomeActivity.this,WorkHome.class);
+            startActivity(intent);
+        }
+
         else if (id==R.id.stats) {
             Intent intent = new Intent(HomeActivity.this,statistics.class);
             intent.putExtra("choice","stats");

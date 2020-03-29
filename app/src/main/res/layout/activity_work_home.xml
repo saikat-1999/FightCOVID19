@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,19 +7,28 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".WorkHome">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <TextView
-        android:id="@+id/title1"
+        android:id="@+id/title2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Tips for Working From Home"
-        android:textColor="@color/blue"
+        android:textColor="#1972BA"
+        android:textAlignment="center"
         android:padding="15dp"
         android:textSize="25dp"
         android:textStyle="bold"/>
     <TextView
+        android:id="@+id/text1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="1. Maintain Regular Hours\n2. Create a Morning Routine\n3. Schedule Breaks\n4. Keep a Dedicated Working Place\n5. Sociliaze with colleagues\n6. Show up to Meetings and be Heard\n7. Look for Training Opportunities\n8. Be Positive\n9. End Your Day with a Routine"/>
-
-
-</LinearLayout>
+        android:text="1. Maintain Regular Hours\n2. Create a Morning Routine\n3. Schedule Breaks\n4. Keep a Dedicated Working Place\n5. Sociliaze with colleagues\n6. Show up to Meetings and be Heard\n7. Look for Training Opportunities\n8. Be Positive\n9. End Your Day with a Routine"
+        android:padding="15dp"
+        android:textColor="#212121"
+        android:lineSpacingExtra="3dp"
+        android:layout_below="@+id/title2"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
