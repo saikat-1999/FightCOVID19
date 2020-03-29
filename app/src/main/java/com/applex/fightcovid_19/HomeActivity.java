@@ -35,6 +35,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         toolbar.setTitle("COVID-19");
         setSupportActionBar(toolbar);
 
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setItemIconTintList(null);
