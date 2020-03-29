@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WorkHome">
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tips for Working From Home"
+        android:textColor="@color/blue"
+        android:padding="15dp"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. Maintain Regular Hours\n2. Create a Morning Routine\n3. Schedule Breaks\n4. Keep a Dedicated Working Place\n5. Sociliaze with colleagues\n6. Show up to Meetings and be Heard\n7. Look for Training Opportunities\n8. Be Positive\n9. End Your Day with a Routine"/>
+
+
+</LinearLayout>
