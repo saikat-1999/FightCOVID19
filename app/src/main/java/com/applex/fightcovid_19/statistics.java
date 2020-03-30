@@ -44,7 +44,7 @@ public class statistics extends AppCompatActivity {
         if(getIntent().getStringExtra("choice").matches("stats"))
             webView.loadUrl("https://www.covidvisualizer.com/");
         else if(getIntent().getStringExtra("choice").matches("donate"))
-            webView.loadUrl("https://www.pmindia.gov.in/en/?query#");
+            webView.loadUrl("https://www.investindia.gov.in/bip/resources/state-and-national-relief-funds-accepting-donations-covid-19");
         else if(getIntent().getStringExtra("choice").matches("state"))
             webView.loadUrl("https://www.mohfw.gov.in/");
 
