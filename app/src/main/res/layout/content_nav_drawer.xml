@@ -314,7 +314,7 @@
                     android:padding="5dp"
                     android:textSize="15dp"
                     android:textColorLink="@color/colorPrimaryDark"
-                    android:text="https://api.whatsapp.com/"
+                    android:text="https://wa.me/919013151515?text=Namaste"
                     android:autoLink="all"/>
 
 <!--                </LinearLayout>-->
