@@ -62,6 +62,7 @@ public class twitter extends AppCompatActivity {
                 webView.loadUrl("https://twitter.com/who?lang=en");
                 progressBar.setVisibility(View.VISIBLE);
                 webView.setVisibility(View.INVISIBLE);
+                webView.clearHistory();
 
                 who.setBackgroundColor(getResources().getColor(R.color.blue));
                 who.setTextColor(getResources().getColor(R.color.white));
@@ -80,7 +81,7 @@ public class twitter extends AppCompatActivity {
                 webView.loadUrl("https://twitter.com/mohfw_india?lang=en");
                 progressBar.setVisibility(View.VISIBLE);
                 webView.setVisibility(View.INVISIBLE);
-
+                webView.clearHistory();
 
                 moh.setBackgroundColor(getResources().getColor(R.color.blue));
                 moh.setTextColor(getResources().getColor(R.color.white));
@@ -98,6 +99,7 @@ public class twitter extends AppCompatActivity {
                 webView.loadUrl("https://twitter.com/mygovindia");
                 progressBar.setVisibility(View.VISIBLE);
                 webView.setVisibility(View.INVISIBLE);
+                webView.clearHistory();
 
                 goi.setBackgroundColor(getResources().getColor(R.color.blue));
                 goi.setTextColor(getResources().getColor(R.color.white));
