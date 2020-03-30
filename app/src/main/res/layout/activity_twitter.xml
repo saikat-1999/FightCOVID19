@@ -9,13 +9,12 @@
     <LinearLayout
         android:id="@+id/linear"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
     <Button
         android:id="@+id/whobtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="25dp"
         android:text="WHO"
         android:layout_weight="1"
         android:textSize="20dp"
@@ -26,25 +25,22 @@
         android:id="@+id/mohbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/whobtn"
-        android:layout_margin="25dp"
         android:text="MOH"
         android:layout_weight="1"
         android:textSize="20dp"
-        android:textColor="#fff"
-        android:background="@color/blue"/>
+        android:textColor="@color/blue"
+        android:background="@android:color/white"/>
     <Button
         android:id="@+id/goibtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/mohbtn"
-        android:layout_margin="25dp"
         android:text="GOI"
         android:layout_weight="1"
         android:textSize="20dp"
-        android:textColor="#fff"
-        android:background="@color/blue"/>
+        android:textColor="@color/blue"
+        android:background="@android:color/white"/>
     </LinearLayout>
+
     <WebView
         android:id="@+id/web"
         android:layout_width="match_parent"

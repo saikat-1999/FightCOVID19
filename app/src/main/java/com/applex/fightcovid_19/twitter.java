@@ -1,9 +1,12 @@
 package com.applex.fightcovid_19;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -18,16 +21,23 @@ public class twitter extends AppCompatActivity {
     Button goi;
 
 
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_twitter);
+
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         progressBar = findViewById(R.id.progressbar);
         who = findViewById(R.id.whobtn);
         moh = findViewById(R.id.mohbtn);
         goi = findViewById(R.id.goibtn);
         webView = findViewById(R.id.web);
         webView.setVisibility(View.INVISIBLE);
+
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient(){
             @Override
@@ -43,11 +53,23 @@ public class twitter extends AppCompatActivity {
             }
 
         });
+
         webView.loadUrl("https://twitter.com/who?lang=en");
+
         who.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 webView.loadUrl("https://twitter.com/who?lang=en");
+                progressBar.setVisibility(View.VISIBLE);
+                webView.setVisibility(View.INVISIBLE);
+
+                who.setBackgroundColor(getResources().getColor(R.color.blue));
+                who.setTextColor(getResources().getColor(R.color.white));
+
+                moh.setBackgroundColor(getResources().getColor(R.color.white));
+                moh.setTextColor(getResources().getColor(R.color.blue));
+                goi.setBackgroundColor(getResources().getColor(R.color.white));
+                goi.setTextColor(getResources().getColor(R.color.blue));
             }
 
         });
@@ -56,6 +78,17 @@ public class twitter extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 webView.loadUrl("https://twitter.com/mohfw_india?lang=en");
+                progressBar.setVisibility(View.VISIBLE);
+                webView.setVisibility(View.INVISIBLE);
+
+
+                moh.setBackgroundColor(getResources().getColor(R.color.blue));
+                moh.setTextColor(getResources().getColor(R.color.white));
+
+                who.setBackgroundColor(getResources().getColor(R.color.white));
+                who.setTextColor(getResources().getColor(R.color.blue));
+                goi.setBackgroundColor(getResources().getColor(R.color.white));
+                goi.setTextColor(getResources().getColor(R.color.blue));
             }
         });
 
@@ -63,6 +96,16 @@ public class twitter extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 webView.loadUrl("https://twitter.com/mygovindia");
+                progressBar.setVisibility(View.VISIBLE);
+                webView.setVisibility(View.INVISIBLE);
+
+                goi.setBackgroundColor(getResources().getColor(R.color.blue));
+                goi.setTextColor(getResources().getColor(R.color.white));
+
+                moh.setBackgroundColor(getResources().getColor(R.color.white));
+                moh.setTextColor(getResources().getColor(R.color.blue));
+                who.setBackgroundColor(getResources().getColor(R.color.white));
+                who.setTextColor(getResources().getColor(R.color.blue));
             }
         });
 
@@ -76,6 +119,15 @@ public class twitter extends AppCompatActivity {
         else {
             super.onBackPressed();
         }
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == android.R.id.home) {
+            super.onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

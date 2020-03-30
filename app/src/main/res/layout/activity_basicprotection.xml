@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,11 +8,12 @@
     android:orientation="vertical"
     tools:context=".basicprotection">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginTop="20dp">
+        android:orientation="vertical">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -19,7 +21,7 @@
             android:text="Wash your hands frequently"
             android:textColor="@android:color/white"
             android:textSize="18dp"
-            android:padding="10dp"
+            android:padding="12dp"
             android:fontFamily="sans-serif-medium"
             android:textStyle="bold"
             android:layout_margin="10dp"/>
@@ -39,11 +41,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_back"
+            android:background="@drawable/button_background"
             android:text="Maintain social distancing"
             android:textColor="@android:color/white"
             android:textSize="18dp"
-            android:padding="10dp"
+            android:padding="12dp"
             android:fontFamily="sans-serif-medium"
             android:textStyle="bold"
             android:layout_margin="10dp" />
@@ -67,7 +69,7 @@
             android:text="Avoid touching eyes, nose and mouth"
             android:textColor="@android:color/white"
             android:textSize="18dp"
-            android:padding="10dp"
+            android:padding="12dp"
             android:fontFamily="sans-serif-medium"
             android:textStyle="bold"
             android:layout_margin="10dp"/>
@@ -86,11 +88,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_back"
+            android:background="@drawable/button_background"
             android:text="Practice respiratory hygiene"
             android:textColor="@android:color/white"
             android:textSize="18dp"
-            android:padding="10dp"
+            android:padding="12dp"
             android:fontFamily="sans-serif-medium"
             android:textStyle="bold"
             android:layout_margin="10dp" />
@@ -113,7 +115,7 @@
             android:text="If you have fever, cough and difficulty breathing, seek medical care early"
             android:textColor="@android:color/white"
             android:textSize="18dp"
-            android:padding="10dp"
+            android:padding="12dp"
             android:fontFamily="sans-serif-medium"
             android:textStyle="bold"
             android:layout_margin="10dp" />
@@ -132,11 +134,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_back"
+            android:background="@drawable/button_background"
             android:text="Stay informed and follow advice given by your healthcare provider"
             android:textColor="@android:color/white"
             android:textSize="18dp"
-            android:padding="10dp"
+            android:padding="12dp"
             android:fontFamily="sans-serif-medium"
             android:textStyle="bold"
             android:layout_margin="10dp" />
@@ -154,4 +156,4 @@
             android:padding="10dp"/>
     </LinearLayout>
 
-</androidx.core.widget.NestedScrollView>
+</ScrollView>

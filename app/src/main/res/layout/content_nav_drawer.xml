@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="none"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_nav_drawer">
     <LinearLayout
@@ -29,11 +30,6 @@
             app:lottie_autoPlay="true"/>
     </LinearLayout>
 
-
-<!--    <androidx.core.widget.NestedScrollView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@+id/animation">-->
         <LinearLayout
             android:id="@+id/cardviews"
             android:layout_width="match_parent"
@@ -42,38 +38,30 @@
             <TextView
                 android:id="@+id/Advice"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="wrap_content"
                 android:textSize="25dp"
-                android:background="@drawable/button_back"
                 android:textStyle="bold"
                 android:layout_gravity="center"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="12dp"
-                android:paddingTop="10dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
                 android:textAlignment="center"
                 android:paddingHorizontal="20dp"
-                android:textColor="#fff"
+                android:textColor="@color/blue"
                 tools:ignore="MissingConstraints"
                 android:text="General Public Advice"/>
 
-             <LinearLayout
+            <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <LinearLayout
+                android:id="@+id/masks"
                 android:layout_margin="15dp"
                 android:layout_width="155dp"
                 android:layout_height="210dp"
                 android:layout_weight="1"
+                android:orientation="vertical"
                 android:background="@drawable/button_back">
-                <LinearLayout
-                android:id="@+id/masks"
-                android:layout_width="150dp"
-                android:layout_height="204dp"
-                android:layout_gravity="center"
-                    android:layout_weight="1"
-                android:background="@drawable/button_background"
-                android:layout_margin="2dp"
-                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
@@ -87,27 +75,21 @@
                         android:textColor="#000"
                         android:textAllCaps="true"
                         android:padding="10dp"
-                        android:gravity="center_horizontal"
+                        android:gravity="center"
                         android:textAlignment="center"
                         android:textSize="20dp"/>
-            </LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/myths"
                 android:layout_margin="15dp"
                 android:layout_width="155dp"
                 android:layout_height="210dp"
                 android:layout_weight="1"
+                android:orientation="vertical"
                 android:background="@drawable/button_back">
-                <LinearLayout
-                    android:id="@+id/myths"
-                    android:layout_width="150dp"
-                    android:layout_height="204dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_background"
-                    android:layout_margin="2dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="130dp"
@@ -121,31 +103,24 @@
                         android:textColor="#000"
                         android:textAllCaps="true"
                         android:padding="10dp"
-                        android:gravity="center_horizontal"
+                        android:gravity="center"
                         android:textAlignment="center"
                         android:textSize="20dp"/>
-                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>
+
              <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <LinearLayout
+                    android:id="@+id/work"
                     android:layout_margin="15dp"
                     android:layout_width="155dp"
                     android:layout_height="210dp"
                     android:layout_weight="1"
+                    android:orientation="vertical"
                     android:background="@drawable/button_back">
-                    <LinearLayout
-                        android:id="@+id/work"
-                        android:layout_width="150dp"
-                        android:layout_height="204dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@drawable/button_background"
-                        android:layout_margin="2dp"
-                        android:orientation="vertical">
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="100dp"
@@ -159,31 +134,23 @@
                             android:textColor="#000"
                             android:textAllCaps="true"
                             android:padding="10dp"
-                            android:gravity="center_horizontal"
+                            android:gravity="center"
                             android:textAlignment="center"
                             android:textSize="20dp"/>
-                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/parenting"
                     android:layout_margin="15dp"
                     android:layout_width="155dp"
                     android:layout_height="210dp"
                     android:layout_weight="1"
+                    android:orientation="vertical"
                     android:background="@drawable/button_back">
-                    <LinearLayout
-                        android:id="@+id/parenting"
-                        android:layout_width="150dp"
-                        android:layout_height="204dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/button_background"
-                        android:layout_margin="2dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="130dp"
-                            android:padding="1dp"
+                            android:padding="6dp"
                             android:layout_gravity="center"
                             android:src="@drawable/parenting"/>
                         <TextView
@@ -193,10 +160,9 @@
                             android:textColor="#000"
                             android:textAllCaps="true"
                             android:padding="10dp"
-                            android:gravity="center_horizontal"
+                            android:gravity="center"
                             android:textAlignment="center"
                             android:textSize="20dp"/>
-                    </LinearLayout>
                 </LinearLayout>
 
             </LinearLayout>
@@ -205,20 +171,14 @@
                 android:layout_height="wrap_content">
 
                 <LinearLayout
+                    android:id="@+id/protect"
                     android:layout_margin="15dp"
                     android:layout_width="155dp"
                     android:layout_height="210dp"
+                    android:orientation="vertical"
                     android:layout_weight="1"
                     android:background="@drawable/button_back">
-                    <LinearLayout
-                        android:id="@+id/protect"
-                        android:layout_width="150dp"
-                        android:layout_height="204dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@drawable/button_background"
-                        android:layout_margin="2dp"
-                        android:orientation="vertical">
+
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="100dp"
@@ -232,10 +192,9 @@
                             android:textColor="#000"
                             android:textAllCaps="true"
                             android:padding="10dp"
-                            android:gravity="center_horizontal"
+                            android:gravity="center"
                             android:textAlignment="center"
                             android:textSize="20dp"/>
-                    </LinearLayout>
                 </LinearLayout>
 
 
@@ -249,15 +208,14 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="250dp"
-                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="Important Websites"
-                android:textSize="20dp"
-                android:layout_marginLeft="12dp"
-                android:padding="5dp"
+                android:textSize="25dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
                 android:textAlignment="center"
-                android:background="@drawable/button_back"
-                android:textColor="#fff"
+                android:textColor="@color/blue"
                 android:textStyle="bold"/>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -342,4 +300,4 @@
         </LinearLayout>
     </LinearLayout>
 <!--    </androidx.core.widget.NestedScrollView>-->
-</androidx.core.widget.NestedScrollView>
+</ScrollView>
