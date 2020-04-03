@@ -40,6 +40,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     LinearLayout myths;
     LinearLayout parenting;
     LinearLayout work;
+    LinearLayout protect;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -126,6 +127,17 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
             }
         });
+
+        protect=findViewById(R.id.protect);
+
+        protect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),basicprotection.class);
+                startActivity(intent);
+
+            }
+        });
     }
 
 
@@ -188,6 +200,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         }
         else if(id==R.id.twitter) {
             Intent intent=new Intent(HomeActivity.this,twitter.class);
+            startActivity(intent);
+
+        }
+        else if(id==R.id.nav_slideshow) {
+            Intent intent=new Intent(HomeActivity.this,WorkHome.class);
             startActivity(intent);
 
         }

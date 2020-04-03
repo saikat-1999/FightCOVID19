@@ -19,10 +19,7 @@
         <activity android:name=".healthyparenting" />
 
         <activity android:name=".Repeating_activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
 
         <receiver android:name=".Notification_receiver"/>
@@ -38,6 +35,10 @@
 
         <activity android:name=".Splash"
             android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
 
