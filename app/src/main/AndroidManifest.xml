@@ -3,6 +3,7 @@
     package="com.applex.fightcovid_19">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
 
     <application
         android:allowBackup="true"
@@ -16,7 +17,14 @@
         <activity android:name=".WorkHome"/>
         <activity android:name=".basicprotection"/>
         <activity android:name=".healthyparenting" />
-        <activity android:name=".Repeating_activity"/>
+
+        <activity android:name=".Repeating_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <receiver android:name=".Notification_receiver"/>
         <activity android:name=".myth" />
         <activity android:name=".statistics" />
@@ -27,13 +35,12 @@
             android:label="@string/title_activity_nav_drawer"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".mask" />
+
         <activity android:name=".Splash"
             android:theme="@style/SplashTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
+
     </application>
 
 </manifest>

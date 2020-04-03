@@ -1,9 +1,12 @@
 package com.applex.fightcovid_19;
 
 import android.app.AlarmManager;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -45,6 +48,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         toolbar.setTitle("COVID-19");
         setSupportActionBar(toolbar);
 
+
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
+            NotificationChannel channel=new NotificationChannel("MyNotifications","MyNotifications", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager=getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -148,12 +157,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                     Toast.makeText(HomeActivity.this,"Hellooooooooooooooooooooooooooo",Toast.LENGTH_LONG).show();
                     //switchCompat.setChecked(true);
                     Calendar calendar = Calendar.getInstance();
-                    calendar.set(Calendar.HOUR_OF_DAY,01);
-                    calendar.set(Calendar.MINUTE,13);
+                    calendar.set(Calendar.HOUR_OF_DAY,23);
+                    calendar.set(Calendar.MINUTE,34);
                     calendar.set(Calendar.SECOND,00);
+
                     Intent intent = new Intent(getApplicationContext(),Notification_receiver.class);
                     PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT);
-                    AlarmManager alarmManager = (AlarmManager)getApplicationContext().getSystemService(Context.ALARM_SERVICE);
+                    AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
                     alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),AlarmManager.INTERVAL_DAY,pendingIntent);
                 }
             }
