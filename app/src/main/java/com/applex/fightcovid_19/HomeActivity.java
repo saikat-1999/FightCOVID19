@@ -74,8 +74,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener( this);
 
         Menu menu = navigationView.getMenu();
-        menu.findItem(R.id.nav_switch);
-        MenuItem menuItem = menu.findItem(R.id.nav_view);
+        MenuItem menuItem = menu.findItem(R.id.nav_switch);
 
         final Switch sw = menuItem.getActionView().findViewById(R.id.switchh);
         final SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
