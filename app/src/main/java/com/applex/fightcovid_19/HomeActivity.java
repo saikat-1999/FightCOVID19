@@ -2,10 +2,12 @@ package com.applex.fightcovid_19;
 
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
+import android.app.AlertDialog;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
@@ -92,9 +94,22 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 editor.apply();
 
                 if(isChecked) {
+
+                    final AlertDialog.Builder builder = new AlertDialog.Builder(HomeActivity.this);
+                    builder.setTitle("Reminder")
+                            .setMessage("By switching on the reminder, you will be receiving notifications for maintaining personal hygiene and adopting precautionary measures, 5 times a day. ")
+                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            })
+                            .setCancelable(true)
+                            .show();
+
                     Calendar calendar = Calendar.getInstance();
-                    calendar.set(Calendar.HOUR_OF_DAY,23);
-                    calendar.set(Calendar.MINUTE,34);
+                    calendar.set(Calendar.HOUR_OF_DAY,02);
+                    calendar.set(Calendar.MINUTE,16);
                     calendar.set(Calendar.SECOND,00);
 
                     Intent intent = new Intent(getApplicationContext(),Notification_receiver.class);

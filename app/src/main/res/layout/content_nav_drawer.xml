@@ -16,16 +16,17 @@
 
     <LinearLayout
         android:id="@+id/animation"
-        android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/game"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            app:lottie_fileName="17745-viroses.json"
+            android:scaleType="fitCenter"
+            app:lottie_fileName="18168-stay-safe-stay-home.json"
             app:lottie_loop="true"
             app:lottie_autoPlay="true"/>
     </LinearLayout>

@@ -8,7 +8,7 @@
 
         <item
             android:id="@+id/nav_switch"
-            android:title="Reminder"
+            android:title="Set Reminder"
             android:icon="@drawable/ic_access_alarm_black_24dp"
             app:actionLayout="@layout/action_switch"
             />
