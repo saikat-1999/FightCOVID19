@@ -17,14 +17,7 @@
         <activity android:name=".WorkHome"/>
         <activity android:name=".basicprotection"/>
         <activity android:name=".healthyparenting" />
-
-        <activity android:name=".Repeating_activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
+        <activity android:name=".Repeating_activity"/>
         <receiver android:name=".Notification_receiver"/>
         <activity android:name=".myth" />
         <activity android:name=".statistics" />
@@ -35,12 +28,13 @@
             android:label="@string/title_activity_nav_drawer"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".mask" />
-
         <activity android:name=".Splash"
             android:theme="@style/SplashTheme">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
