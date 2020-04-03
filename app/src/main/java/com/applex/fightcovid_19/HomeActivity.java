@@ -59,25 +59,25 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
 
-//        Menu menu = navigationView.getMenu();
-//        Switch switchCompat = (Switch) MenuItemCompat.getActionView(menu.findItem(R.id.nav_switch)).findViewById(R.id.switchh);
-//        switchCompat.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                if(isChecked) {
-//                    Toast.makeText(HomeActivity.this,"Hellooooooooooooooooooooooooooo",Toast.LENGTH_LONG);
-//                    //switchCompat.setChecked(true);
-//                    Calendar calendar = Calendar.getInstance();
-//                    calendar.set(Calendar.HOUR,17);
-//                    calendar.set(Calendar.MINUTE,22);
-//                    //calendar.set(Calendar.SECOND,05);
-//                    Intent intent = new Intent(getApplicationContext(),Notification_receiver.class);
-//                    PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT);
-//                    AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-//                    alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),AlarmManager.INTERVAL_DAY,pendingIntent);
-//                }
-//            }
-//        });
+        Menu menu = navigationView.getMenu();
+        Switch switchCompat = (Switch) MenuItemCompat.getActionView(menu.findItem(R.id.nav_switch)).findViewById(R.id.switchh);
+        switchCompat.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked) {
+                    Toast.makeText(HomeActivity.this,"Hellooooooooooooooooooooooooooo",Toast.LENGTH_LONG);
+                    //switchCompat.setChecked(true);
+                    Calendar calendar = Calendar.getInstance();
+                    calendar.set(Calendar.HOUR,17);
+                    calendar.set(Calendar.MINUTE,22);
+                    //calendar.set(Calendar.SECOND,05);
+                    Intent intent = new Intent(getApplicationContext(),Notification_receiver.class);
+                    PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT);
+                    AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+                    alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),AlarmManager.INTERVAL_DAY,pendingIntent);
+                }
+            }
+        });
         navigationView.setItemIconTintList(null);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -169,8 +169,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                     Toast.makeText(HomeActivity.this,"Hellooooooooooooooooooooooooooo",Toast.LENGTH_LONG).show();
                     //switchCompat.setChecked(true);
                     Calendar calendar = Calendar.getInstance();
-                    calendar.set(Calendar.HOUR_OF_DAY,23);
-                    calendar.set(Calendar.MINUTE,34);
+                    calendar.set(Calendar.HOUR_OF_DAY,00);
+                    calendar.set(Calendar.MINUTE,21);
                     calendar.set(Calendar.SECOND,00);
 
                     Intent intent = new Intent(getApplicationContext(),Notification_receiver.class);
