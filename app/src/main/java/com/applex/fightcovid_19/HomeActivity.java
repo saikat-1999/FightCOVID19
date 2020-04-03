@@ -1,11 +1,13 @@
 package com.applex.fightcovid_19;
 
+import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
@@ -35,11 +37,14 @@ import java.util.Calendar;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private AppBarConfiguration mAppBarConfiguration;
     LinearLayout masks;
     LinearLayout myths;
     LinearLayout parenting;
     LinearLayout work;
+
+    public static final String SHARED_PREFS = "sharedPrefs";
+    public static final String SWITCH_PREF = "switch";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,34 +60,50 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             manager.createNotificationChannel(channel);
         }
 
+        ////////////////////NAV DRAWER/////////////////
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
 
-//        Menu menu = navigationView.getMenu();
-//        Switch switchCompat = (Switch) MenuItemCompat.getActionView(menu.findItem(R.id.nav_switch)).findViewById(R.id.switchh);
-//        switchCompat.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                if(isChecked) {
-//                    Toast.makeText(HomeActivity.this,"Hellooooooooooooooooooooooooooo",Toast.LENGTH_LONG);
-//                    //switchCompat.setChecked(true);
-//                    Calendar calendar = Calendar.getInstance();
-//                    calendar.set(Calendar.HOUR,17);
-//                    calendar.set(Calendar.MINUTE,22);
-//                    //calendar.set(Calendar.SECOND,05);
-//                    Intent intent = new Intent(getApplicationContext(),Notification_receiver.class);
-//                    PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT);
-//                    AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-//                    alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),AlarmManager.INTERVAL_DAY,pendingIntent);
-//                }
-//            }
-//        });
         navigationView.setItemIconTintList(null);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener( this);
+
+        Menu menu = navigationView.getMenu();
+        menu.findItem(R.id.nav_switch);
+        MenuItem menuItem = menu.findItem(R.id.nav_view);
+
+        final Switch sw = menuItem.getActionView().findViewById(R.id.switchh);
+        final SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+
+        sw.setChecked(sharedPreferences.getBoolean(SWITCH_PREF, false));
+
+        sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                @SuppressLint("CommitPrefEdits")
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putBoolean(SWITCH_PREF, isChecked);
+
+                if(isChecked) {
+                    Calendar calendar = Calendar.getInstance();
+                    calendar.set(Calendar.HOUR_OF_DAY,23);
+                    calendar.set(Calendar.MINUTE,34);
+                    calendar.set(Calendar.SECOND,00);
+
+                    Intent intent = new Intent(getApplicationContext(),Notification_receiver.class);
+                    PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT);
+                    AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+                    alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),AlarmManager.INTERVAL_DAY,pendingIntent);
+                }
+            }
+        });
+
+        ////////////////////NAV DRAWER/////////////////
+
 
         masks = findViewById(R.id.masks);
 
@@ -129,47 +150,45 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.nav_drawer, menu);
-//        return true;
-//    }
 
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         int id = menuItem.getItemId();
 
         if (id == R.id.guide_child) {
-            // Handle the camera action
             Intent intent=new Intent(HomeActivity.this,children.class);
             startActivity(intent);
         }
-        else if(id == R.id.nav_switch) {
-            Toast.makeText(HomeActivity.this,"Hellooooooooooooooooooooooooooo",Toast.LENGTH_LONG).show();
-            NavigationView navigationView = findViewById(R.id.nav_view);
-            Menu menu = (Menu) navigationView.getMenu();
-            menu.findItem(R.id.nav_switch);
-            Switch sw = (Switch) menuItem.getActionView().findViewById(R.id.switchh);
-            sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked) {
-                    Toast.makeText(HomeActivity.this,"Hellooooooooooooooooooooooooooo",Toast.LENGTH_LONG).show();
-                    //switchCompat.setChecked(true);
-                    Calendar calendar = Calendar.getInstance();
-                    calendar.set(Calendar.HOUR_OF_DAY,23);
-                    calendar.set(Calendar.MINUTE,34);
-                    calendar.set(Calendar.SECOND,00);
-
-                    Intent intent = new Intent(getApplicationContext(),Notification_receiver.class);
-                    PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT);
-                    AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-                    alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),AlarmManager.INTERVAL_DAY,pendingIntent);
-                }
-            }
-        });
-
-        }
+//        else if(id == R.id.nav_switch) {
+//            NavigationView navigationView = findViewById(R.id.nav_view);
+////            Menu menu = navigationView.getMenu();
+////            menu.findItem(R.id.nav_switch);
+//            Switch sw = menuItem.getActionView().findViewById(R.id.switchh);
+//
+//            ////////////////SHARED PREFERENCES/////////////
+//            SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
+//            SharedPreferences.Editor editor = sharedPreferences.edit();
+//
+//            editor.putBoolean(SWITCH_PREF, sw.isChecked());
+//            ////////////////SHARED PREFERENCES/////////////
+//
+//            sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                if(isChecked) {
+//                    Calendar calendar = Calendar.getInstance();
+//                    calendar.set(Calendar.HOUR_OF_DAY,23);
+//                    calendar.set(Calendar.MINUTE,34);
+//                    calendar.set(Calendar.SECOND,00);
+//
+//                    Intent intent = new Intent(getApplicationContext(),Notification_receiver.class);
+//                    PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT);
+//                    AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+//                    alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),AlarmManager.INTERVAL_DAY,pendingIntent);
+//                }
+//            }
+//        });
+//
+//        }
 
         else if (id==R.id.stats) {
             Intent intent = new Intent(HomeActivity.this,statistics.class);
@@ -196,4 +215,5 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }
