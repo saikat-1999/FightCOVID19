@@ -76,8 +76,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         Menu menu = navigationView.getMenu();
         MenuItem menuItem = menu.findItem(R.id.nav_switch);
 
-        final Switch sw = menuItem.getActionView().findViewById(R.id.switchh);
-        final SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        Switch sw = menuItem.getActionView().findViewById(R.id.switchh);
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
 
         sw.setChecked(sharedPreferences.getBoolean(SWITCH_PREF, false));
 
@@ -86,6 +86,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
                 @SuppressLint("CommitPrefEdits")
+                SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putBoolean(SWITCH_PREF, isChecked);
 
@@ -134,7 +135,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),workplace.class);
                 startActivity(intent);
-
             }
         });
 
