@@ -37,7 +37,6 @@ import java.util.Calendar;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private AppBarConfiguration mAppBarConfiguration;
     LinearLayout masks;
     LinearLayout myths;
     LinearLayout parenting;
