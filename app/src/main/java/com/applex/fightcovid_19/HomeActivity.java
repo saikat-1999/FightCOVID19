@@ -85,10 +85,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-                @SuppressLint("CommitPrefEdits")
                 SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+                @SuppressLint("CommitPrefEdits")
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putBoolean(SWITCH_PREF, isChecked);
+                editor.apply();
 
                 if(isChecked) {
                     Calendar calendar = Calendar.getInstance();
