@@ -2,6 +2,7 @@ package com.applex.fightcovid_19;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
+import android.widget.Switch;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -34,7 +37,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     LinearLayout myths;
     LinearLayout parenting;
     LinearLayout work;
-    LinearLayout protect;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,23 +49,25 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
 
-        Menu menu = navigationView.getMenu();
-        SwitchCompat switchCompat = (SwitchCompat) MenuItemCompat.getActionView(menu.findItem(R.id.nav_switch)).findViewById(R.id.switchh);
-        switchCompat.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked) {
-                    Calendar calendar = Calendar.getInstance();
-//                    calendar.set(Calendar.HOUR,03);
-//                    calendar.set(Calendar.MINUTE,07);
-//                    calendar.set(Calendar.SECOND,05);
-                    Intent intent = new Intent(getApplicationContext(),Notification_receiver.class);
-                    PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT);
-                    AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-                    alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),AlarmManager.INTERVAL_DAY,pendingIntent);
-                }
-            }
-        });
+//        Menu menu = navigationView.getMenu();
+//        Switch switchCompat = (Switch) MenuItemCompat.getActionView(menu.findItem(R.id.nav_switch)).findViewById(R.id.switchh);
+//        switchCompat.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                if(isChecked) {
+//                    Toast.makeText(HomeActivity.this,"Hellooooooooooooooooooooooooooo",Toast.LENGTH_LONG);
+//                    //switchCompat.setChecked(true);
+//                    Calendar calendar = Calendar.getInstance();
+//                    calendar.set(Calendar.HOUR,17);
+//                    calendar.set(Calendar.MINUTE,22);
+//                    //calendar.set(Calendar.SECOND,05);
+//                    Intent intent = new Intent(getApplicationContext(),Notification_receiver.class);
+//                    PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT);
+//                    AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+//                    alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),AlarmManager.INTERVAL_DAY,pendingIntent);
+//                }
+//            }
+//        });
         navigationView.setItemIconTintList(null);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -113,17 +117,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
             }
         });
-
-        protect=findViewById(R.id.protect);
-
-        protect.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),basicprotection.class);
-                startActivity(intent);
-
-            }
-        });
     }
 
 
@@ -142,11 +135,30 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             Intent intent=new Intent(HomeActivity.this,children.class);
             startActivity(intent);
         }
+        else if(id == R.id.nav_switch) {
+            Toast.makeText(HomeActivity.this,"Hellooooooooooooooooooooooooooo",Toast.LENGTH_LONG).show();
+            NavigationView navigationView = findViewById(R.id.nav_view);
+            Menu menu = (Menu) navigationView.getMenu();
+            menu.findItem(R.id.nav_switch);
+            Switch sw = (Switch) menuItem.getActionView().findViewById(R.id.switchh);
+            sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked) {
+                    Toast.makeText(HomeActivity.this,"Hellooooooooooooooooooooooooooo",Toast.LENGTH_LONG).show();
+                    //switchCompat.setChecked(true);
+                    Calendar calendar = Calendar.getInstance();
+                    calendar.set(Calendar.HOUR_OF_DAY,01);
+                    calendar.set(Calendar.MINUTE,13);
+                    calendar.set(Calendar.SECOND,00);
+                    Intent intent = new Intent(getApplicationContext(),Notification_receiver.class);
+                    PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT);
+                    AlarmManager alarmManager = (AlarmManager)getApplicationContext().getSystemService(Context.ALARM_SERVICE);
+                    alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),AlarmManager.INTERVAL_DAY,pendingIntent);
+                }
+            }
+        });
 
-        else if (id == R.id.nav_slideshow) {
-            // Handle the camera action
-            Intent intent=new Intent(HomeActivity.this,WorkHome.class);
-            startActivity(intent);
         }
 
         else if (id==R.id.stats) {

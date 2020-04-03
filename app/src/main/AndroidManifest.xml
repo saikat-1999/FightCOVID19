@@ -16,6 +16,8 @@
         <activity android:name=".WorkHome"/>
         <activity android:name=".basicprotection"/>
         <activity android:name=".healthyparenting" />
+        <activity android:name=".Repeating_activity"/>
+        <receiver android:name=".Notification_receiver"/>
         <activity android:name=".myth" />
         <activity android:name=".statistics" />
         <activity android:name=".twitter" />
