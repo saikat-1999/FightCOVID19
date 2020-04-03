@@ -10,7 +10,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:paddingBottom="15dp">
     <TextView
         android:id="@+id/title2"
         android:layout_width="match_parent"
@@ -22,13 +24,187 @@
         android:textSize="25dp"
         android:textStyle="bold"/>
     <TextView
+        android:id="@+id/heading1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. Maintain Regular Hours"
+        android:textSize="18dp"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:textColor="#000"
+        android:layout_below="@+id/title2"/>
+
+    <TextView
         android:id="@+id/text1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="1. Maintain Regular Hours\n2. Create a Morning Routine\n3. Schedule Breaks\n4. Keep a Dedicated Working Place\n5. Sociliaze with colleagues\n6. Show up to Meetings and be Heard\n7. Look for Training Opportunities\n8. Be Positive\n9. End Your Day with a Routine"
-        android:padding="15dp"
+        android:layout_marginLeft="12dp"
+        android:text="Set a schedule, and stick to it...most of the time. Having clear guidelines for when to work and when to call it a day helps many remote workers maintain work-life balance. Installing an automatic time-tracking app, such as RescueTime, lets you check in on whether you're sticking to your schedule. "
+        android:textSize="15dp"
+        android:padding="5dp"
         android:textColor="#212121"
-        android:lineSpacingExtra="3dp"
-        android:layout_below="@+id/title2"/>
+        android:layout_below="@+id/heading1"/>
+
+    <TextView
+        android:id="@+id/heading2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. Create a Morning Routine"
+        android:textSize="18dp"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:textColor="#000"
+        android:layout_below="@+id/text1"/>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text="Deciding you'll sit down at your desk and start work at a certain time is one thing. Creating a routine that guides you into the chair is another. What in your morning routine delineates the start of work? It might be making a cup of coffee. It might be returning home after a jog. It might be getting dressed. Create a morning routine that ends with you starting work."
+        android:textSize="15dp"
+        android:padding="5dp"
+        android:textColor="#212121"
+        android:layout_below="@+id/heading2"/>
+
+    <TextView
+        android:id="@+id/heading3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3. Schedule Breaks"
+        android:textSize="18dp"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:textColor="#000"
+        android:layout_below="@+id/text2"/>
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text="Know your company's policy on break times and take them. If you're self-employed, give yourself adequate time during the day to walk away from the computer screen and phone. A lunch hour and two 15-minute breaks seems to be the standard for full-time US employees."
+        android:textSize="15dp"
+        android:padding="5dp"
+        android:textColor="#212121"
+        android:layout_below="@+id/heading3"/>
+
+    <TextView
+        android:id="@+id/heading4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4. Keep a Dedicated Working Place"
+        android:textSize="18dp"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:textColor="#000"
+        android:layout_below="@+id/text3"/>
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text="Dedicate a desk and some peripherals only for work use. For example, when your laptop is hooked up to the monitor and external keyboard, it's work time. When it's on your lap, that's personal time. You may want to go as far as partitioning your hard drive and creating a separate user account for work, too."
+        android:textSize="15dp"
+        android:padding="5dp"
+        android:textColor="#212121"
+        android:layout_below="@+id/heading4"/>
+
+    <TextView
+        android:id="@+id/heading5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="5. Socialize with Colleagues"
+        android:textSize="18dp"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:textColor="#000"
+        android:layout_below="@+id/text4"/>
+
+    <TextView
+        android:id="@+id/text5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text="Loneliness, disconnect, and isolation are common problems in remote work life, especially for extroverts. Companies with a remote work culture usually offer ways to socialize. For example, they might have chat channels where remote employees can talk about common interests, meetups for people in the same region, and in-person retreats. It's important to figure out how much interaction you need to feel connected and included. If you're not at a company with a strong remote culture, you may need to be more proactive about nurturing relationships."
+        android:textSize="15dp"
+        android:padding="5dp"
+        android:textColor="#212121"
+        android:layout_below="@+id/heading5"/>
+
+    <TextView
+        android:id="@+id/heading6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="6. Show up to Meetings and be Heard"
+        android:textSize="18dp"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:textColor="#000"
+        android:layout_below="@+id/text5"/>
+
+    <TextView
+        android:id="@+id/text6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text="Certainly, you'll take part in video conferences and conference calls, but it's a good idea to attend optional meetings sometimes, too. Be sure to speak up during the meeting so everyone knows you're on the call. A simple, 'Thanks, everyone. Bye!' at the close of a meeting will go a long way toward making your presence known."
+        android:textSize="15dp"
+        android:padding="5dp"
+        android:textColor="#212121"
+        android:layout_below="@+id/heading6"/>
+
+    <TextView
+        android:id="@+id/heading7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="7. Be Positive"
+        android:textSize="18dp"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:textColor="#000"
+        android:layout_below="@+id/text6"/>
+
+    <TextView
+        android:id="@+id/text7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text="When you work remotely full-time, you must be positive, to the point where it may feel like you're being overly positive. Otherwise, you risk sounding like a jerk. It's unfortunate, but true. So embrace the exclamation point! Find your favorite emoji :D. You're going to need them."
+        android:textSize="15dp"
+        android:padding="5dp"
+        android:textColor="#212121"
+        android:layout_below="@+id/heading7"/>
+
+    <TextView
+        android:id="@+id/heading8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="8. End Your Day with a Routine"
+        android:textSize="18dp"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:textColor="#000"
+        android:layout_below="@+id/text7"/>
+
+    <TextView
+        android:id="@+id/text8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text="Just as you should start your day with a routine, create a habit that signals the close of the workday. It might be a sign off on a business messaging apps, an evening dog walk, or a 6 p.m. yoga class. You might have a simple routine such as shutting down your computer and turning on a favorite podcast. Whatever you choose, do it consistently to mark the end of working hours."
+        android:textSize="15dp"
+        android:padding="5dp"
+        android:textColor="#212121"
+        android:layout_below="@+id/heading8"/>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
