@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "141104970563",
+    "firebase_url": "https://fight-covid-19-e1822.firebaseio.com",
+    "project_id": "fight-covid-19-e1822",
+    "storage_bucket": "fight-covid-19-e1822.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:141104970563:android:4943ce799f829d70f08df6",
+        "android_client_info": {
+          "package_name": "com.applex.fightcovid_19"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "141104970563-flps0g71f9p7099a9r5k9lqpaful0kca.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0nZiSJCp6WjqiDPbiHLTd-2-rtVIwi3w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "141104970563-flps0g71f9p7099a9r5k9lqpaful0kca.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
