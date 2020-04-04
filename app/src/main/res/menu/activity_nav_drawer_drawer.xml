@@ -38,7 +38,7 @@
             android:title="Twitter Feed"
             android:icon="@drawable/twitter_logo_blue"/>
         <item
-            android:title="Developed by:\n applex.in"
+            android:title="Developed by: applex.in"
             android:icon="@drawable/applex_logo"
             />
 
